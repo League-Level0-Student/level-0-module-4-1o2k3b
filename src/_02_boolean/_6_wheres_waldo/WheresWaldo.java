@@ -11,7 +11,7 @@ import processing.core.PImage;
 
 /*
  * Goal: Create a Where's Waldo game!
- * 
+ 
  * 1. Find a Where's Waldo image and copy it into the /images folder at the
  *    top level of this module OR use the provided waldo.jpg image.
  * 
@@ -37,6 +37,7 @@ import processing.core.PImage;
  *      X and Y coordinates. If the coordinates are on Waldo call the
  *      playWhoohoo() method, otherwise call the playDoh() method.
  */
+
 public class WheresWaldo extends PApplet {
     static final int WIDTH = 600;
     static final int HEIGHT = 400;
@@ -50,12 +51,26 @@ public class WheresWaldo extends PApplet {
 
     @Override
     public void setup() {
-        
+    waldo=loadImage("waldo.jpg");
+    waldo.resize(600, 400);
     }
 
     @Override
     public void draw() {
-        
+     image(waldo,0,0);
+     if(mousePressed) {
+    	 System.out.println(mouseX+"-"+mouseY);
+     }
+   ellipse(390, 245, 10, 10);
+  if(mousePressed) {
+		   if(mouseX>374 && mouseX<413) {
+if(mouseY > 204 && mouseY < 281) {
+	   System.out.println("you get waldos covid case");
+	   
+   }
+		   }
+		   }
+   
     }
 
     static public void main(String[] args) {

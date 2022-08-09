@@ -48,7 +48,7 @@ public class GooglyEyes extends PApplet {
     
     @Override
     public void setup() {
-    	 doge = loadImage("doge.jpg");
+    	 doge = loadImage("doge.jpeg");
     	 doge.resize(800, 600);
     }
 
